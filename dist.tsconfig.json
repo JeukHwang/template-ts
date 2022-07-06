@@ -5,12 +5,12 @@
             "DOM",
             "ES2018"
         ],
-        "outDir": "./build",
-        "rootDir": "./code",
+        "outDir": "./dist",
+        "rootDir": "./src",
         "types": []
     },
     "include": [
-        "./code"
+        "./src"
     ],
     "extends": "./base.tsconfig.json"
 }

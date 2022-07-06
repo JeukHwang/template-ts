@@ -4,8 +4,8 @@
     "description": "Template for TypeScript + ESLint",
     "main": "index.js",
     "scripts": {
-        "clean": "shx rm -rf ./build",
-        "build": "tsc --project build.tsconfig.json",
+        "clean": "shx rm -rf ./dist",
+        "build": "tsc --project dist.tsconfig.json",
         "reset": "npm run clean && npm run build",
         "lint": "npx eslint code/**/*"
     },
