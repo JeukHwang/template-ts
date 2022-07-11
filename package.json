@@ -2,12 +2,11 @@
     "name": "template-ts-eslint",
     "version": "1.0.0",
     "description": "Template for TypeScript + ESLint",
-    "main": "index.js",
     "scripts": {
         "clean": "shx rm -rf ./dist",
-        "build": "tsc --project dist.tsconfig.json",
-        "reset": "npm run clean && npm run build",
-        "lint": "npx eslint code/**/*"
+        "build": "npm run clean && tsc --project ./dist.tsconfig.json",
+        "bundle": "npx webpack",
+        "lint": "npx eslint ./src/**/*"
     },
     "repository": {
         "type": "git",
@@ -27,5 +26,9 @@
         "eslint-config-airbnb-base": "^15.0.0",
         "shx": "^0.3.4",
         "typescript": "^4.7.4"
+    },
+    "dependencies": {
+        "ts-loader": "^9.3.1",
+        "webpack-cli": "^4.10.0"
     }
 }
