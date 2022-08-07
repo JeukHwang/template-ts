@@ -1,18 +1,39 @@
 # template-ts-eslint
 Template for TypeScript + ESLint
 
-## How to use
-- Caution
-    - Write in `src` and compile to `dist`
-- Command
-    - `npm run clean` to erase compiled one
-    - `npm run build` to compile new one
-    - `npm run reset` to erase previous one and compile new one
-- Essential config
-    - Change `template-ts-eslint` to `<repo-name>`
-    - Change description in `package.json`
-    - Remove the content of `README.md`
-- Optional config
-    - Remove `dist` in `.gitignore` if you want to upload compiled one
-    - Change `target`, `libs` in `dist.tsconfig.json/compilerOptions` as you want
-    - Add `<lib-name>` to `dist.tsconfig.json/compilerOptions/types` after installing `@types/<lib-name>`
+## Brief explanation
+- Input directory is `src`
+- Output directory is `dist`
+- Configuration directory is `config`
+
+## Getting started
+1. Change `template-ts-eslint` to `<your-own-repo-name>`
+2. Change the content of `package.json/description`, `README.md`, and `src`
+4. To add types in module `<module-name>`, install `@types/<module-name>` and add `<module-name>` to `dist.tsconfig.json/compilerOptions/types`
+
+
+## Command explanation
+| Command  | Explanation                                  | Related configuration file                             |
+|----------|----------------------------------------------|--------------------------------------------------------|
+| lint     | Lint `src`                                   | config/.eslint.cjs                                     |
+| lint:fix | Lint and fix `src`                           | config/.eslint.cjs                                     |
+| build    | Compile `src` to `dist/build`                | config/build.config.json                               |
+| start    | Run node with `dist`                         |                                                        |
+| build:wp | Compile and bundle `src` to `dist/bundle.js` | config/bundle.webpack.cjs, config/bundle.tsconfig.json |
+| start:wp | Run node with `dist/bundle.js`               |                                                        |
+
+## Others
+### Webpack installation
+ ```
+npm install -g webpack webpack-cli
+ ```
+
+### Material Icon Theme configuration in VSC
+To change the icon of `*.webpack.cjs`, add follwing code snippets in settings
+
+```
+"material-icon-theme.files.associations": {
+    "base.webpack.cjs": "webpack",
+    "bundle.webpack.cjs": "webpack",
+}
+```

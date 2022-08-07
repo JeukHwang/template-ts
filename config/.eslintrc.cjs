@@ -25,5 +25,4 @@ module.exports = {
         "no-console": "warn",
     },
     settings: { "import/resolver": { node: { extensions: [".js", ".jsx", ".ts", ".tsx"] } } },
-    overrides: [{ files: ["code/c1.ts"] }],
 };

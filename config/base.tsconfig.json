@@ -4,7 +4,12 @@
         "noPropertyAccessFromIndexSignature": false,
         "strict": true,
         "strictNullChecks": true,
-        "alwaysStrict": true
+        "alwaysStrict": true,
+        "target": "ES2018",
+        "lib": [
+            "DOM",
+            "ES2018"
+        ]
     },
     "rules": {
         "no-any": true,
