@@ -1,5 +1,5 @@
-# Template-ts
-Template for TypeScript + ESLint
+# template-ts
+Template for TypeScript with eslint and webpack config
 
 ## Brief explanation
 - Input directory is `src`
@@ -7,7 +7,7 @@ Template for TypeScript + ESLint
 - Configuration directory is `config`
 
 ## Getting started
-1. Change `Template-ts` to `<your-own-repo-name>`
+1. Change `template-ts` to `<your-own-repo-name>`
 2. Change the content of `package.json/description`, `README.md`, and `src`
 4. To add types in module `<module-name>`, install `@types/<module-name>` and add `<module-name>` to `dist.tsconfig.json/compilerOptions/types`
 
