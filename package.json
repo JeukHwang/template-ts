@@ -1,5 +1,5 @@
 {
-    "name": "template-ts-eslint",
+    "name": "Template-ts",
     "version": "1.0.0",
     "description": "Template for TypeScript + ESLint",
     "scripts": {
@@ -12,14 +12,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/JeukHwang/template-ts-eslint.git"
+        "url": "git+https://github.com/JeukHwang/Template-ts.git"
     },
     "author": "JeukHwang",
     "license": "GPL-3.0",
     "bugs": {
-        "url": "https://github.com/JeukHwang/template-ts-eslint/issues"
+        "url": "https://github.com/JeukHwang/Template-ts/issues"
     },
-    "homepage": "https://github.com/JeukHwang/template-ts-eslint#readme",
+    "homepage": "https://github.com/JeukHwang/Template-ts#readme",
     "devDependencies": {
         "@tsconfig/node16-strictest-esm": "^1.0.3",
         "@typescript-eslint/eslint-plugin": "^5.30.5",
