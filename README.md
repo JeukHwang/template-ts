@@ -1,5 +1,5 @@
 # template-ts
-Template for TypeScript with eslint and webpack config
+Template for TypeScript
 
 ## Brief explanation
 - Input directory is `src`
@@ -13,14 +13,17 @@ Template for TypeScript with eslint and webpack config
 
 
 ## Command explanation
-| Command  | Explanation                                  | Related configuration file                             |
-|----------|----------------------------------------------|--------------------------------------------------------|
-| lint     | Lint `src`                                   | config/.eslint.cjs                                     |
-| lint:fix | Lint and fix `src`                           | config/.eslint.cjs                                     |
-| build    | Compile `src` to `dist/build`                | config/build.config.json                               |
-| start    | Run node with `dist`                         |                                                        |
-| build:wp | Compile and bundle `src` to `dist/bundle.js` | config/bundle.webpack.cjs, config/bundle.tsconfig.json |
-| start:wp | Run node with `dist/bundle.js`               |                                                        |
+| Command      | Explanation                                  | Related configuration file                             |
+|--------------|----------------------------------------------|--------------------------------------------------------|
+| lint         | Lint `src`                                   | config/.eslint.cjs                                     |
+| lint:fix     | Lint and fix `src`                           | config/.eslint.cjs                                     |
+| format:check | Check whether format is consistent with lint | config/.eslint.cjs                                     |
+| format       | Format `src`                                 | config/.prettierrc.cjs                                 |
+| style        | Lint and format `src`                        | config/.eslint.cjs, config/.prettierrc.cjs             |
+| build        | Compile `src` to `dist/build`                | config/build.config.json                               |
+| start        | Run node with `dist`                         |                                                        |
+| build:wp     | Compile and bundle `src` to `dist/bundle.js` | config/bundle.webpack.cjs, config/bundle.tsconfig.json |
+| start:wp     | Run node with `dist/bundle.js`               |                                                        |
 
 ## Others
 ### Webpack installation
@@ -37,3 +40,12 @@ To change the icon of `*.webpack.cjs`, add follwing code snippets in settings
     "bundle.webpack.cjs": "webpack",
 }
 ```
+### Why do this template use both ESLint and Prettier?
+- ESLint : `linter` focusing on catching error in code
+- Prettier : `formatter` focusing on consistent style of code
+
+- [Compare integration tools](https://stackoverflow.com/questions/44690308)
+    - prettier-eslint
+    - eslint-plugin-prettier
+    - eslint-config-prettier (`used in this project`)
+- [Official docs about integration from Prettier](https://prettier.io/docs/en/integrating-with-linters)

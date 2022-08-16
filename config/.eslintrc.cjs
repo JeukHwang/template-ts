@@ -2,17 +2,11 @@ module.exports = {
     parser: "@typescript-eslint/parser",
     env: { browser: true, node: true, es6: true },
     plugins: ["@typescript-eslint"],
-    extends: ["airbnb-base", "plugin:@typescript-eslint/recommended"],
+    extends: ["airbnb-base", "plugin:@typescript-eslint/recommended", "prettier"],
     parserOptions: { ecmaVersion: 6, sourceType: "module" },
     rules: {
-        semi: ["error", "always"],
-        quotes: ["error", "double"],
         indent: "off",
-        "no-multiple-empty-lines": ["error", { max: 2, maxEOF: 1 }],
-        "@typescript-eslint/indent": ["error", 4],
         "no-plusplus": ["off", { allowForLoopAfterthoughts: true }],
-        "object-curly-newline": ["error", { multiline: true }],
-        "linebreak-style": ["error", "windows"],
         "import/extensions": ["off"],
         "import/prefer-default-export": ["off"],
         "no-param-reassign": ["error", { props: false }],
@@ -21,8 +15,19 @@ module.exports = {
         "@typescript-eslint/consistent-type-assertions": "error",
         "@typescript-eslint/no-var-requires": "off", // just for this file
         "@typescript-eslint/no-non-null-assertion": "warn",
-        "max-len": ["warn", { code: 120 }],
         "no-console": "warn",
+
+        // To prevent conflict with prettier
+        // Suggested from eslint-config-prettier        
+        // "@typescript-eslint/indent": ["error", 4],
+        // "linebreak-style": ["error", "windows"],
+        // "no-multiple-empty-lines": ["error", { max: 2, maxEOF: 1 }],
+        // "object-curly-newline": ["error", { multiline: true }],
+        // semi: ["error", "always"],
+        "max-len": ["warn", { code: 120 }],
+        // quotes: ["error", "double"],
+        "quotes": ["error", "double", { "avoidEscape": true, "allowTemplateLiterals": false }]
+
     },
     settings: { "import/resolver": { node: { extensions: [".js", ".jsx", ".ts", ".tsx"] } } },
 };

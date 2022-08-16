@@ -1,0 +1,104 @@
+{
+    // editor
+    "editor.detectIndentation": false,
+    "editor.inlineSuggest.enabled": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true,
+        "source.fixAll.eslint": true,
+        "source.organizeImports": true,
+        "source.addMissingImports": true
+    },
+    "editor.suggestSelection": "first",
+    "editor.accessibilitySupport": "off",
+    "editor.codeLens": false,
+    "editor.unicodeHighlight.nonBasicASCII": false,
+
+    "editor.formatOnSave": true,
+
+    // eslint
+    "eslint.options": { "overrideConfigFile": "./config/.eslintrc.cjs" },
+    "eslint.alwaysShowStatus": true,
+    "eslint.validate": [
+        "javascript",
+        "html",
+        "typescript"
+    ],
+    // "eslint.workingDirectories": [ { "mode": "auto" } ],
+    "eslint.workingDirectories": [ "./src" ],
+    "eslint.format.enable": true,
+    "eslint.lintTask.enable": true,
+
+    // prettier
+    "prettier.configPath":"./config/.prettierrc.cjs",
+    "prettier.requireConfig": true,
+    "prettier.enableDebugLogs": true,
+    "prettier.documentSelectors": [
+        "./src/**/*.{js, ts}"
+    ],
+
+    // ext
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "javascript.format.semicolons": "insert",
+
+    "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+    "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+    "typescript.inlayHints.enumMemberValues.enabled": true,
+    "typescript.inlayHints.parameterNames.enabled": "all",
+    "typescript.inlayHints.variableTypes.enabled": true,
+    "typescript.inlayHints.parameterTypes.enabled": true,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+
+    // "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features",
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[javascript]": {
+        // "editor.defaultFormatter": "vscode.typescript-language-features",
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        // "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+    "terminal.integrated.defaultProfile.windows": "Windows PowerShell",
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [],
+            "icon": "terminal-cmd"
+        },
+        "Git Bash": {
+            "source": "Git Bash"
+        },
+        "Windows PowerShell": {
+            "path": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+        }
+    },
+    
+    // others
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveServer.settings.donotVerifyTags": true,
+    "liveshare.autoShareServers": true,
+    "liveSassCompile.settings.generateMap": false,
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "git.autofetch": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.editor.splitInGroupLayout": "vertical",
+    "material-icon-theme.files.associations": {
+        "base.webpack.cjs": "webpack",
+        "bundle.webpack.cjs": "webpack",
+    },
+    "files.autoSave": "afterDelay",
+}
