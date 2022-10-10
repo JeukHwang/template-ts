@@ -11,7 +11,7 @@
         "build": "shx rm -rf ./dist/build && tsc --project ./config/build.tsconfig.json",
         "start": "node --experimental-specifier-resolution=node ./dist/build/index.js",
         "build:wp": "npx webpack --config ./config/bundle.webpack.cjs",
-        "start:wp": "node --experimental-specifier-resolution=node ./dist/bundle.js "
+        "start:wp": "node --experimental-specifier-resolution=node ./dist/bundle.js",
     },
     "repository": {
         "type": "git",
