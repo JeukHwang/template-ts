@@ -15,17 +15,27 @@ Template for TypeScript
 
 
 ## Command explanation
+### Easy to start
+```shell
+npm run style                   # lint and format
+npm run restart                 # start after build
+npm run style; npm run restart  # do all you can do!
+```
+
+### Full list
 | Command      | Explanation                                  | Related configuration file                                                           |
 |--------------|----------------------------------------------|--------------------------------------------------------------------------------------|
 | lint         | Lint `src`                                   | [config/.eslint.cjs][eslint]                                                         |
 | lint:fix     | Lint and fix `src`                           | [config/.eslint.cjs][eslint]                                                         |
-| format:check | Check conflict between ESLint and Prettier   | [config/.eslint.cjs][eslint]                                                         |
+| format:check | Check conflict between linter and formatter  | [config/.eslint.cjs][eslint]                                                         |
 | format       | Format `src`                                 | [config/.prettierrc.cjs][prettier]                                                   |
 | style        | Lint and format `src`                        |                                                                                      |
 | build        | Compile `src` to `dist/build`                | [config/build.tsconfig.json][build-tsconfig]                                         |
 | start        | Run node with `dist`                         |                                                                                      |
 | build:wp     | Compile and bundle `src` to `dist/bundle.js` | [config/bundle.webpack.cjs][webpack], [config/bundle.tsconfig.json][bundle-tsconfig] |
 | start:wp     | Run node with `dist/bundle.js`               |                                                                                      |
+| start:wp     | Run node with `dist/bundle.js`               |                                                                                      |
+| restart      | Build and start                              |                                                                                      |
 
 [eslint]: ./config/.eslintrc.cjs
 [prettier]: ./config/.prettierrc.cjs
