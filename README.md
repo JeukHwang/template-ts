@@ -8,22 +8,40 @@ Template for TypeScript
 
 ## Getting started
 1. Change `template-ts` to `<your-own-repo-name>`
-2. Change the content of `package.json/description`, `README.md`, and `src`
+2. Change `Template for TypeScript` to `<your-own-repo-description>`
+3. Change the content of `src`
 4. To add types in module `<module-name>`, install `@types/<module-name>` and add `<module-name>` to `dist.tsconfig.json/compilerOptions/types`
+5. (optional) Rename this markdown file to `template.md` and make new markdown file `README.md`
 
 
 ## Command explanation
-| Command      | Explanation                                  | Related configuration file                             |
-|--------------|----------------------------------------------|--------------------------------------------------------|
-| lint         | Lint `src`                                   | config/.eslint.cjs                                     |
-| lint:fix     | Lint and fix `src`                           | config/.eslint.cjs                                     |
-| format:check | Check whether format is consistent with lint | config/.eslint.cjs                                     |
-| format       | Format `src`                                 | config/.prettierrc.cjs                                 |
-| style        | Lint and format `src`                        | config/.eslint.cjs, config/.prettierrc.cjs             |
-| build        | Compile `src` to `dist/build`                | config/build.config.json                               |
-| start        | Run node with `dist`                         |                                                        |
-| build:wp     | Compile and bundle `src` to `dist/bundle.js` | config/bundle.webpack.cjs, config/bundle.tsconfig.json |
-| start:wp     | Run node with `dist/bundle.js`               |                                                        |
+### Easy to start
+```shell
+npm run style                   # lint and format
+npm run restart                 # start after build
+npm run style; npm run restart  # do all you can do!
+```
+
+### Full list
+| Command      | Explanation                                  | Related configuration file                                                           |
+|--------------|----------------------------------------------|--------------------------------------------------------------------------------------|
+| lint         | Lint `src`                                   | [config/.eslint.cjs][eslint]                                                         |
+| lint:fix     | Lint and fix `src`                           | [config/.eslint.cjs][eslint]                                                         |
+| format:check | Check conflict between linter and formatter  | [config/.eslint.cjs][eslint]                                                         |
+| format       | Format `src`                                 | [config/.prettierrc.cjs][prettier]                                                   |
+| style        | Lint and format `src`                        |                                                                                      |
+| build        | Compile `src` to `dist/build`                | [config/build.tsconfig.json][build-tsconfig]                                         |
+| start        | Run node with `dist`                         |                                                                                      |
+| build:wp     | Compile and bundle `src` to `dist/bundle.js` | [config/bundle.webpack.cjs][webpack], [config/bundle.tsconfig.json][bundle-tsconfig] |
+| start:wp     | Run node with `dist/bundle.js`               |                                                                                      |
+| start:wp     | Run node with `dist/bundle.js`               |                                                                                      |
+| restart      | Build and start                              |                                                                                      |
+
+[eslint]: ./config/.eslintrc.cjs
+[prettier]: ./config/.prettierrc.cjs
+[webpack]: config/bundle.webpack.cjs
+[build-tsconfig]: config/build.tsconfig.json
+[bundle-tsconfig]: config/bundle.tsconfig.json
 
 ## Others
 ### Webpack installation
